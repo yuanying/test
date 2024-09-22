@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Run tests
+        run: |
+          echo "Running tests: $TEST"
+          ruby -e "puts 'Hello, world!: #{ENV['TEST']}'"
+        env:
+          TEST: "test"
