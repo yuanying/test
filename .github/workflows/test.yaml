@@ -15,5 +15,8 @@ jobs:
           puts "Hello #{ENV['TEST']}"
           EOF
           ruby test.rb
+
+          puts "Show exported variables"
+          export
         env:
           TEST: "test"
