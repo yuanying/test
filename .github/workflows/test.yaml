@@ -16,7 +16,7 @@ jobs:
           EOF
           ruby test.rb
 
-          puts "Show exported variables"
+          echo "Show exported variables"
           export
         env:
           TEST: "test"
