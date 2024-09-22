@@ -11,6 +11,9 @@ jobs:
       - name: Run tests
         run: |
           echo "Running tests: $TEST"
-          ruby -e "puts 'Hello, world!: #{ENV['TEST']}'"
+          cat <<EOF > test.rb
+          puts "Hello #{ENV['TEST']}"
+          EOF
+          ruby test.rb
         env:
           TEST: "test"
